@@ -1,6 +1,6 @@
-FROM python:2.7.13
+FROM jupyter/notebook
 LABEL maintainer wuhao1542@yahoo.com
 
-RUN pip install numpy scipy pandas matplotlib seaborn scikit-learn jupyter
+RUN pip install numpy scipy pandas matplotlib seaborn scikit-learn
 
-CMD ["jupyter-notebook", "--NotebookApp.token="]
+CMD ["jupyter-notebook", "--NotebookApp.token=", "--no-browser"]
